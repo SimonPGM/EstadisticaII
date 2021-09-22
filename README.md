@@ -31,13 +31,11 @@ La siguiente es la estructura de las carpetas del repositorio.
 
 <ul>
     <li> Taller n (fecha de realización del taller). n es el número de la sesion de taller
-    <li> 
-        <ul> 
-            <li> Archivo de R con el código comentado. </li>
-            <li> Archivo Rmd que genera el pdf del instructivo. </li>
-            <li> Archivo PDF generado por el Rmd.</li>
-        </ul>
-    </li>
+    <ul> 
+        <li> Archivo de R con el código comentado. </li>
+        <li> Archivo Rmd que genera el pdf del instructivo. </li>
+        <li> Archivo PDF generado por el Rmd.</li>
+    </ul>
 </ul>
 
 <b>Posdata:</b> En general esa es la estructura de las carpetas, puede variar según surja o se considere necesario.
