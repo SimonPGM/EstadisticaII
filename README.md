@@ -1,12 +1,12 @@
-<h1> Repositorio para el curso Estadística II </h1>
+<h1 style="text-align: center;"> Repositorio para el curso Estadística II </h1>
 
 En este repositorio van a encontrar todos los códigos de R para generar los resultados de cada práctica.
 
 <b>No</b> se incluye el código para el Dashboard y/o PDF mostrado(s) durante las sesiones de taller.
 
-<h2> Horarios de interés </h2>
+<h2 style="text-align: center;"> Horarios de interés </h2>
 
-<table>
+<table style="margin-left: auto; margin-left: auto;">
     <thead>
         <tr>
         <th> Evento </th>
