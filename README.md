@@ -1,14 +1,3 @@
-<style>
-    h1, h2 {
-        text-align: center;
-    }
-    table {
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
-
-
 <h1> Repositorio para el curso Estadística II </h1>
 
 En este repositorio van a encontrar todos los códigos de R para generar los resultados de cada práctica.
