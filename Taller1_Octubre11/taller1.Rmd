@@ -71,7 +71,7 @@ la gráfica generada anteriormente.
 3. Realice una interpretación del parámetro $\beta_0$, ¿qué unidades tiene? Determine si este es significativo usando $\alpha = 0.05$ y si tiene
 sentido en el contexto de los datos.
 4. Repita el proceso anteriormente enunciado con el parámetro $\beta_1$.
-5. Calcule un intervalo de confianza del 95% para ambos parámetros del modelo.Antes de calcularlo responda, ¿dichos intervalos deberían contener al 
+5. Calcule un intervalo de confianza del 95% para ambos parámetros del modelo. Antes de calcularlo responda, ¿dichos intervalos deberían contener al 
 cero?
 6. Use el modelo para predecir el número de calificaciones dentro de la categoría de 5 estrellas para las observaciones que no fueron usadas para 
 ajustar el modelo. Realice un gráfico de los valores reales vs los valores predichos ¿qué observa en dicho gráfico? 
