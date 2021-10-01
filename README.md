@@ -40,4 +40,6 @@ La siguiente es la estructura de las carpetas del repositorio.
 </ul>
 
 <b>Posdata:</b> en general esa es la estructura de las carpetas, puede variar según surja o se considere necesario.
+
+
 <b>Nota:</b> durante la primera semana no habrá sesión de taller, sin embargo puede usar el espacio de asesoría para solucionar dudas respecto a la instalación de R, RStudio o respecto conceptos teóricos del curso.
