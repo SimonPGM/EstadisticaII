@@ -16,12 +16,12 @@ En este repositorio van a encontrar todos los códigos de R para generar los res
     </thead>
     <tbody>
     <tr>
-        <th> Taller </th>
+        <th> <a href="https://meet.google.com/wab-hqzw-iar">Taller</a> </th>
         <th> Lunes </th>
         <th> 14 - 16 </th>
     </tr>
     <tr>
-        <th> Asesoría </th>
+        <th> <a href="https://meet.google.com/kho-jatw-cyu">Asesoría</a> </th>
         <th> Martes y Miércoles </th>
         <th> 16 - 18 </th>
     </tr>
