@@ -28,7 +28,7 @@ library(tidyverse)
 
 $\rule{6.5in}{1pt}$
 
-Se presentan una base de datos que recopila información de diferentes 
+Se presenta una base de datos que recopila información de diferentes 
 aplicaciones de la Play Store de Google. Dicha información presentada en 
 variables que muestran atributos de las aplicaciones como el número de veces 
 que esta ha sido instalada, el total de calificaciones que ha recibido y su 
