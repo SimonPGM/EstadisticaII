@@ -1,6 +1,6 @@
 library(tidyverse)
 #primer ejercicio
-datos <- read.csv("./Taller1/android-games.csv")
+datos <- read.csv("android-games.csv")
 datos_modelo <- datos %>% 
   filter(category == "GAME ACTION",
          total_ratings <= 4121627) %>%
