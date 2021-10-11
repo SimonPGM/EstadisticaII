@@ -61,18 +61,14 @@ de calificaciones en la categoría de cinco estrellas como la variable respuesta
 Su tarea como analista es realizar las siguientes tareas usando el software
 estadístico $R$.
 
-1. Realice la lectura de la base de datos, posteriormente seleccione solo la covariable y la
-variable respuesta, filtre para solo quedarse con aquellas observaciones que tengan
-menos de 100000 calificaciones totales y pertenezcan a la categoría de juegos de acción. Finalmente guarde dichas observaciones en una nueva base de
-datos.
+1. Realice la lectura de la base de datos, posteriormente filtre para solo quedarse con 
+aquellas observaciones que tengan menos de 4121627 calificaciones totales y pertenezcan a la categoría de juegos de acción, seleccione solo la covariable y la variable respuesta.
+Finalmente guarde dichas observaciones en una nueva base de datos.
 2. Elabore un gráfico de dispersión de los datos, luego de esto analícelo.
 3. Escriba la ecuación del modelo de regresión, junto con sus supuestos. Ajuste un modelo de regresión lineal simple y añada la recta de regresión a 
 la gráfica generada anteriormente. 
-3. Realice una interpretación del parámetro $\beta_0$, ¿qué unidades tiene? Determine si este es significativo usando $\alpha = 0.05$ y si tiene
+4. Realice una interpretación del parámetro $\beta_0$, ¿qué unidades tiene? Determine si este es significativo usando $\alpha = 0.05$ y si tiene
 sentido en el contexto de los datos.
-4. Repita el proceso anteriormente enunciado con el parámetro $\beta_1$.
-5. Calcule un intervalo de confianza del 95% para ambos parámetros del modelo. Antes de calcularlo responda, ¿dichos intervalos deberían contener al 
+5. Repita el proceso anteriormente enunciado con el parámetro $\beta_1$.
+6. Calcule un intervalo de confianza del 95% para ambos parámetros del modelo. Antes de calcularlo responda, ¿dichos intervalos deberían contener al 
 cero?
-6. Use el modelo para predecir el número de calificaciones dentro de la categoría de 5 estrellas para las observaciones que no fueron usadas para 
-ajustar el modelo. Analice el gráfico de los valores reales vs los valores predichos
-que se presenta en la solución ¿qué observa en dicho gráfico? 
