@@ -44,4 +44,4 @@ La siguiente es la estructura de las carpetas del repositorio.
 
 <b>Nota:</b> durante la primera semana no habrá sesión de taller, sin embargo puede usar el espacio de asesoría para solucionar dudas respecto a la instalación de R, RStudio o respecto a conceptos teóricos del curso.
 
-<h1><b>IMPORTANTE: EL TALLER DE LA SEMANA DEL 18 AL 22 DE OCTUBRE SE DARÁ EL MIÉRCOLES 20 DE OCTUBRE DE 4 A 6 P.M.</b></h1>
+<h1><b>IMPORTANTE: EL TALLER DE LA SEMANA DEL 18 AL 24 DE OCTUBRE SE REALIZARÁ EL DÍA MIÉRCOLES 20 DE OCTUBRE DE 4 A 6 P.M. EL INGRESO A ESTE SERÁ A TRAVÉS DEL ENLACE DE LAS ASESORÍAS.</b></h1>
