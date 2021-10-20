@@ -43,16 +43,15 @@ datos[1:5, ] %>%
   kable_styling(position = "center", latex_options = "hold_position")
 ```
 
-Su tarea como analista es realizar las siguientes tareas usando el software
+Su misión como analista es realizar las siguientes tareas usando el software
 estadístico $R$.
 
 1. Realice la lectura de la base de datos, seleccione únicamente las variables numéricas.
-2. Elabore un gráfico de dispersión de las variables para encontrar aquella que
-se presente una mejor relación lineal con respecto a la variable respuesta.
+2. Elabore un gráfico de dispersión de las variables para encontrar aquella que presente una mejor relación lineal con respecto a la variable respuesta.
 3. Escriba la ecuación del modelo de regresión, junto con sus supuestos. Ajuste un modelo de regresión lineal simple y añada la recta de regresión a 
 la gráfica generada anteriormente. \textbf{Nota:} seleccione aleatoriamente el 80%
 de los datos para ajustar el modelo.
-4. Realice la prueba de Wald para la pendiente, luego realice la prueba de significancia
+4. Realice la prueba de significancia para la pendiente, luego realice la prueba de significancia
 de la regresión usando análisis de varianza. ¿Ambos enfoques permiten llegar a la misma
 conclusión? ¿Qué relación existe entre una prueba y la otra?
 5. De una interpretación de los parámetros $\beta_0$ y $\beta_1$ del modelo, claro está,
