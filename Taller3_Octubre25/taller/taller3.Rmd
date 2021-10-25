@@ -49,7 +49,7 @@ datos <- gen_dat(75)
 
 head(datos) %>% 
   kable(booktab = T, caption = "Presentación de los datos",
-        longtable = T) %>%
+        longtable = T, align = "c") %>%
   kable_styling(latex_options = "HOLD_position")
 ```
 
