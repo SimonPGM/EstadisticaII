@@ -78,7 +78,7 @@ datos <- gen_dat(75)
 $$y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \ \varepsilon_i \overset{iid}{\sim} N(0, \sigma^2); \ 1 \leq i \leq 75$$
 3. Determine que parámetros son significativos y cuales no en el modelo, hágalo de 
 manera rápida aprovechando alguna de las funciones de `R` usadas hasta el momento. 
-4. Extraiga los residuales del modelo y verifique que estos tengan media igual a 0, de un 
+4. Extraiga los residuales del modelo y verifique que estos tengan media igual a 0, dé un 
 argumento de por qué este supuesto siempre se cumple.
 5. Determine si los residuales tienen varianza constante, argumente por qué esto
 es o no es así, además, si nota algún patrón o algo que considere anormal, coméntelo.
@@ -89,5 +89,5 @@ gráfica. Los valores de las variables están ingresados en la base de datos por
 orden cronológico.
 8. Con la base de datos table.b3 del paquete `MPV`, realice la prueba de falta de ajuste,
 del modelo $$y_i = \beta_0 + \beta_1 x4_i + \varepsilon_i, \ \varepsilon_i \overset{iid}{\sim} N(0, \sigma^2); \ 1 \leq i \leq 32$$
-para ello use la función `rsm` del paquete `rsm`.
+para ello use la función `rsm` del paquete `rsm`. \\
 \textbf{Nota:} se propone como ejercicio realizar la validación del modelo.
