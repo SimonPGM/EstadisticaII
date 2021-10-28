@@ -31,11 +31,32 @@ En este repositorio van a encontrar todos los códigos de R para generar los res
 La siguiente es la estructura de las carpetas del repositorio.
 
 <ul>
-    <li> Taller n (fecha de realización del taller). n es el número de la sesion de taller
+    <li> Tallern_(fecha de realización del taller). n es el número de la sesion de taller
     <ul> 
-        <li> Archivo de R con el código comentado. </li>
-        <li> Archivo Rmd que genera el pdf del instructivo. </li>
-        <li> Archivo PDF generado por el Rmd.</li>
+        <li> taller. </li>
+        <ul> 
+            <li>Base de datos (opcional). </li>
+            <li> Archivo .Rmd con que genera el pdf del taller.</li>
+            <li> Archivo .pdf con el enunciado del taller.</li>
+            <li> Respectivo proyecto de R.</li>
+        </ul>
+        <li> solucion. </li>
+        <ul> 
+            <li>SolucionSimon</li>
+                <ul> 
+                    <li> Base de datos (opcional). </li>
+                    <li> Archivo .Rmd con que genera el pdf de la solución del taller.</li>
+                    <li> Archivo .pdf con la solución del taller.</li>
+                    <li> Script con el código de la solución por mí.</li>
+                    <li> Respectivo proyecto de R.</li>
+                </ul>
+            <li>Tallern</li>
+                <ul> 
+                    <li> Base de datos (opcional). </li>
+                    <li> Script con el código de la solución mostrada en la sesión de taller.</li>
+                    <li> Respectivo proyecto de R.</li>
+                </ul>
+        </ul>
     </ul>
 </ul>
 
