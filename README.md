@@ -65,6 +65,3 @@ La siguiente es la estructura de las carpetas del repositorio.
 
 <b>Nota:</b> recuerde que este sábado es el taller de 
 repaso, de 10 A.M. a 12 M.
-
-<b>ÉXITOS EN EL PARCIAL, LES VA A IR MUY BIEN :)</b>
-
