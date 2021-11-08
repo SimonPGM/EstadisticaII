@@ -33,14 +33,12 @@ teórico y operativo.
 
 1. Considere las siguientes afirmaciones y determine su valor de verdad.
 a) Toda matriz de varianzas-covarianzas es anti simétrica.
-b) La estimación de $\sigma^2$ es una ponderación de la suma de cuadrados del error con el número de observaciones menos el número de covariables.
-c) Sea $A \in \mathbb{R}^{mxn}$, $\underline{y} = \left[X_1, \cdots, X_n\right]^T$ un vector aleatorio de tal que $var[\underline{y}] = \Sigma_y$, la entrada $i,j$
+b) Sea $A \in \mathbb{R}^{mxn}$, $\underline{y} = \left[X_1, \cdots, X_n\right]^T$ un vector aleatorio de tal que $var[\underline{y}] = \Sigma_y$, la entrada $i,j$
 de la matriz $A \Sigma_y A^T$ es igual a $Cov[X_i, X_j]$.
-d) Todas las entradas de la matriz de correlaciones son menores a uno.
-e) El modelo $y_i = \sum_{j = 0}^{k} \beta_j x^{j}_{i} + \varepsilon_i, \ \varepsilon_i \stackrel{\text{iid}}{\sim} N(0, \sigma^2)$ es lineal.
-f) Las relaciones lineales fuertes entre predictoras ayudan al modelo.
-g) Al agregar variables cualitativas se deben considerar todos los niveles
-de dicho factor.
+c) Todas las entradas de la matriz de correlaciones son menores a uno.
+d) El modelo $y_i = \sum_{j = 0}^{k} \beta_j x^{j}_{i} + \varepsilon_i, \ \varepsilon_i \stackrel{\text{iid}}{\sim} N(0, \sigma^2)$ es lineal.
+e) Sea $A \in \mathbb{R}^{nxn}$ tal que $A = A^{T}$ y $A$ es idempotente, entonces
+$(I_{n} - A)^{n} = (I_{n} - A)$
 
 2. Un ingeniero realizó un experimento para determinar el rendimiento total 
 del aceite por lote de cacahuate, para ello tuvo en cuenta variables como la
@@ -65,13 +63,14 @@ datos %>%
   kable_styling(latex_options = "hold_position")
 ```
 
-Calcule la matriz de varianzas-covarianzas y la matriz de correlaciones 
-(muestrales), escriba un modelo con las covariables tanto en forma matricial
-como en forma escalar, ajuste el modelo usando los estimadores de mínimos
-cuadrados y estime la varianza.
+a) Calcule la matriz de varianzas-covarianzas. 
+b) Calcule la matriz de correlaciones. 
+c) Escriba un modelo con las covariables en forma escalar. 
+d) Añada una columna de unos al principio de los datos (excluyendo la covariable), de ahora en adelante dicha matriz será nombrada $\mathbf{X}$.
+e) Calcule las matrices $\mathbf{X}^T\mathbf{X}$, $(\mathbf{X}^T\mathbf{X})^{-1}$,
+$(\mathbf{X}^T\mathbf{X})^{-1}(\mathbf{X}^T\underline{y})$,
+$\mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}(\mathbf{X}^T\underline{y})$ y 
+$\underline{y} - \mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}(\mathbf{X}^T\underline{y})$.
 
 \textbf{Nota:} la base de datos se encuentra como `table.b7` en el paquete
 `MPV`
-
-3. Ajuste el modelo usando `R`, compare los parámetros estimados con
-los del ejercicio anterior.
