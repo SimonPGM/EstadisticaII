@@ -60,5 +60,6 @@ La siguiente es la estructura de las carpetas del repositorio.
     </ul>
 </ul>
 
+<b>Nota:</b> dado que ya se culminó la primera sección del curso, la estructura de carpetas se mantiene dentro de la carpeta de la sección correspondiente del curso.
 <b>Posdata:</b> en general esa es la estructura de las carpetas, puede variar según surja o se considere necesario.
 
