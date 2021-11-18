@@ -1,0 +1,33 @@
+---
+header-includes:
+- \usepackage{longtable}
+- \usepackage[utf8]{inputenc}
+- \usepackage[spanish]{babel}\decimalpoint
+- \setlength{\parindent}{1.25cm}
+- \usepackage{amsmath}
+output:
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+papersize: letter
+geometry: margin = 1in
+language: "es"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, fig.align = 'center',  message = F)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+\input{titlepage}
+\thispagestyle{empty}
+\tableofcontents
+
+\newpage
+
+\pagestyle{myheadings}
+\setcounter{page}{3}
+
+\section{Ejercicio 1}
