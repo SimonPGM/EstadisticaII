@@ -15,7 +15,7 @@ language: "es"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, fig.align = 'center',  message = F)
+knitr::opts_chunk$set(echo = F, fig.align = 'center',  message = F, fig.pos = "H")
 library(tidyverse)
 library(knitr)
 library(kableExtra)
@@ -24,6 +24,8 @@ library(kableExtra)
 \input{titlepage}
 \thispagestyle{empty}
 \tableofcontents
+\listoffigures
+\listoftables
 
 \newpage
 
@@ -31,3 +33,143 @@ library(kableExtra)
 \setcounter{page}{3}
 
 \section{Ejercicio 1}
+
+a) Verdadero, pues como $H$ es simétrica e idempotente se tiene que $H^{2021} = H$ y $H^T = H$, por tanto
+$H = (H^{2021})^T$. 
+b) Verdadero, ya que $gl(SSE) = n - p = 98$, entonces $n = 98 + p = 98 + 4 = 102$.
+c) Verdadero, es una definición teórica.
+d) Verdadero, pues el rango de la matriz $\mathbf{L}$ y el número de filas linealmente independientes son lo
+mismo.
+
+\section{Ejercicio 2}
+
+\subsection{Descripción de la base de datos}
+
+```{r, fig.cap="Matriz de gráficos"}
+source("funciones.R") #cargando todo lo que hay en el archivo funciones.R
+base <- read.table("datos.txt", header = T) #leyendo la base de datos
+pairs(base, lower.panel = myPanel.cor, upper.panel = panel.smooth, diag.panel = myPanel.box, labels = names(base))
+```
+
+Del gráfico anterior podemos notar que existe una relación de manera lineal muy pobre entre la respuesta y 
+las covariables, además, se puede notar redundancia entre las variables $X_1$ y $X_2$ puesto que esán relacionadas
+fuertemente de manera lineal y se podría explicar una con la otra.
+Finalmente, la variable $X_2$ es la que presenta una dispersión mayor respecto al resto, además, no se observaron
+datos atípicos.
+
+\subsection{Ajuste del modelo}
+Se desea ajustar el siguiente modelo de regresión lineal múltiple 
+$$y_i = \beta_0 + \beta_1x_{1i} + \beta_2x_{2i} +  \beta_3x_{3i} + \beta_4x_{4i} + \varepsilon_i, \ \varepsilon_i \stackrel{iid}{\sim} N(0, \sigma^2);  \ 1 \leq i \leq 54$$
+
+```{r}
+modelo <- lm(Y ~ ., base)
+```
+
+
+Una vez ajustado el modelo se obtuvo lo siguiente
+
+$$\hat{y}_i = 4.148 + -3.6905x_{1i} + 0.0095x_{2i} +  47.9402x_{3i} + 11.3710x_{4i};  \ 1 \leq i \leq 54$$
+
+\subsection{Análisis marginal de los coeficientes}
+
+Para el análisis marginal se realizó la siguiente prueba para $j = 1, \cdots, 4$.
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \beta_j = 0 \\
+H_1&: \beta_j \neq 0
+\end{aligned}
+\end{cases}
+$$
+con $T_0 = \frac{\hat{\beta}_j}{se(\hat{\beta}_j)} \sim t_{49} \text{ bajo } H_0$
+
+```{r}
+tabla.coef <- summary(modelo)$coefficients 
+row.names(tabla.coef) <- c("$\\beta_0$", "$\\beta_1$", "$\\beta_2$", "$\\beta_3$", "$\\beta_4$")
+tabla.coef %>%
+  kable(row.names = T, escape = F,
+        col.names = c("Estimación", "Error estándar", "$T_0$", "Valor P"),
+        align = "c", caption = "Resumen de los coeficientes", booktab = T, digits = 4) %>%
+  kable_styling(latex_options = "HOLD_position")
+```
+
+Del cuadro 1, se puede observar que a nivel marginal, la única variable cuyo efecto es significativo en la
+respuesta, es $X_3$, con un nivel de significancia de $\alpha = 0.05$.
+
+\subsection{Análisis de varianza}
+
+Se desea verificar la significancia de la regresión mediante la tabla ANOVA, esto para contrastar el siguiente
+juego de hipótesis.
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \beta_1  = \cdots = \beta_4 = 0 \\
+H_1&: \text{Al menos un } \beta_j \neq 0
+\end{aligned}
+\end{cases}
+$$
+
+Se obtuvo lo siguiente realizando el análisis de varianza 
+
+```{r}
+tabla.anova <- myAnova(modelo)
+row.names(tabla.anova) <- c("Regresión", "Error")
+tabla.anova %>%
+  kable(row.names = T, escape = F,
+        col.names = c("Suma de cuadrados", "gl", "Cuadrado Medio", "$F_0$" ,"Valor P"),
+        align = "c", caption = "Tabla ANOVA para el modelo", booktab = T, digits = 4) %>%
+  kable_styling(latex_options = "HOLD_position")
+```
+Donde $F_0 = \frac{MSR}{MSE} \sim F_{4, 49} \text{ bajo } H_0$
+
+De la tabla ANOVA se rechaza la hipótesis nula a un nivel de significancia del 5%, que al menos uno de los
+coeficientes del modelo es significativo.
+
+\subsection{Prueba lineal generalizada}
+
+Se tiene que los parámetros $\beta_1$, $\beta_2$ y $\beta_4$ no son significativos de manera marginal, por tanto
+se desea probar la siguiente hipótesis.
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \mathbf{L} \beta = 0 \\
+H_1&: \mathbf{L} \beta  \neq 0
+\end{aligned}
+\end{cases}
+$$
+
+donde $$L = \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \\
+                            0 & 0 & 1 & 0 & 0 & 0 \\
+                            0 & 0 & 0 & 0 & 1 & 0 \\
+                            0 & 0 & 0 & 0 & 0 & 1 \\
+                            \end{bmatrix}$$
+
+Se define el modelo reducido como sigue
+$$y_i = \beta_3x_{3i} + \varepsilon_i, \ \varepsilon_i \stackrel{iid}{\sim} N(0, \sigma^2);  \ 1 \leq i \leq 54$$
+y se toma al modelo completo como el que se definió anteriormente.
+
+Se calculó el estadístico $F_0 = \frac{MSH}{MSE} \sim F_{3,49} \text{ bajo } H_0$ como se muestra a continuación
+$$F_0 = \frac{SSE(\beta_0, \beta_3) - SSE(\beta_0, \beta_1, \beta_3, \beta_3, \beta_4)/3}{MSE} = 2.2574$$
+
+con lo que se obtiene un Valor P de 0.09341, por lo que no se rechaza la hipótesis nula.
+
+\subsection{Modelo reducido}
+
+```{r}
+modeloredu <- lm(Y ~ X3, data = base)
+```
+
+
+Se ajustó el modelo reducido y se obtuvo que su estimación fue
+$$\hat{y}_i = 35.34x_{3i};  \ 1 \leq i \leq 54$$
+
+Se presenta la gfráfica de dicho modelo
+
+```{r, fig.cap = "Modelo reducido"}
+with(base, plot(X3, Y, main = "Y vs X3"))
+abline(modeloredu, col = "cyan")
+```
+
