@@ -141,10 +141,9 @@ H_1&: \mathbf{L} \beta  \neq 0
 \end{cases}
 $$
 
-donde $$L = \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \\
-                            0 & 0 & 1 & 0 & 0 & 0 \\
-                            0 & 0 & 0 & 0 & 1 & 0 \\
-                            0 & 0 & 0 & 0 & 0 & 1 \\
+donde $$L = \begin{bmatrix} 0 & 1 & 0 & 0 & 0 \\
+                            0 & 0 & 1 & 0 & 0 \\
+                            0 & 0 & 0 & 0 & 1 \\
                             \end{bmatrix}$$
 
 Se define el modelo reducido como sigue
