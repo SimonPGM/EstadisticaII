@@ -48,7 +48,7 @@ se halló que la media y varianza muestrales fueron 12.5 y 1.252 galones respect
 estimación del promedio de consumo diario y calcule su respectivo intervalo de confianza,
 realice lo propio para el consumo total diario de la comunidad. Suponga que en la comunidad
 existe un total de 10000 casas. Determine cuantas unidades son necesarias para obtener un límite
-para le error de estimación de la media del consumo diario de 1 galón.
+para el error de estimación de la media del consumo diario de 1 galón.
 
 3. París es una ciudad que recibe diariamente 1500 turistas. Se desea realizar un estudio
 y se ha seleccionado una muestra aleatoria simple de turistas, donde se les preguntó
@@ -64,8 +64,8 @@ t(df) %>%
   kable_styling(latex_options = "HOLD_position")
 ```
 
-a. ¿Estime los gastos totales en consumo que realizan los turistas en París?
-b. ¿Estime el total de turistas que són extranjeros? Estime un intervalo de confianza.
+a. Estime los gastos totales en consumo que realizan los turistas en París.
+b. Estime el total de turistas que són extranjeros. Estime un intervalo de confianza.
 c. Determine el tamaño de muestra mínimo necesario para estimar la propoción de extranjeros
-que visitan París en un día con un límite para el error de estimación de 0.2 y una confianza de
+que visitan París en un día con un límite para el error de estimación de 2% y una confianza de
 95%
