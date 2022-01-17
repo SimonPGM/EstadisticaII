@@ -28,7 +28,7 @@ library(kableExtra)
 $\rule{6.5in}{1pt}$
 
 1. Determine el valor de verdad de las siguientes afirmaciones
-a) un censo consiste en seleccionar un subconjunto de la población, medir la característica
+a) Un censo consiste en seleccionar un subconjunto de la población, medir la característica
 de interés e inferir con esta información acerca de toda la población.
 b) La probabilidad de que una unidad en particular esté presente en la muestra es $\frac{n}{N}$.
 c) Para $N$ muy grande se tiene que $\mathbb{E}\left(S^2\right) \approx \sigma^2$.
@@ -64,8 +64,8 @@ t(df) %>%
   kable_styling(latex_options = "HOLD_position")
 ```
 
-a. ¿A cuánto equivalen los gastos totales en consumo que realizan los turistas en París?
-b. ¿Cuál es el total de turistas que són extranjeros? Estime un intervalo de confianza.
+a. ¿Estime los gastos totales en consumo que realizan los turistas en París?
+b. ¿Estime el total de turistas que són extranjeros? Estime un intervalo de confianza.
 c. Determine el tamaño de muestra mínimo necesario para estimar la propoción de extranjeros
 que visitan París en un día con un límite para el error de estimación de 0.2 y una confianza de
 95%
