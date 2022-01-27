@@ -7,7 +7,7 @@ header-includes:
 - \usepackage{amsmath}
 output:
   pdf_document: default
-fontsize: 11pt
+fontsize: 12pt
 papersize: letter
 geometry: margin = 1in
 language: "es"
@@ -38,9 +38,9 @@ kable(df1, escape = F, booktab = T, align = "c") %>%
     kable_styling(latex_options = c("HOLD_position"))
 ```
 
-Estime:
-a) La media poblacional.
-b) El total poblacional.
+Estime: \newline
+a) La media poblacional. \newline
+b) El total poblacional. \newline
 Para ambos parámetros poblacionales, defina claramente a que corresponde cada uno en el contexto del
 problema y construya un intervalo de confianza del 95%.
 
@@ -49,12 +49,13 @@ El presupuesto disponible solo alcanza para seleccionar una muestra de $n = 210$
 estan compuestos por 1000, 2000 y 5000 individuos cada uno, además, estudios previos tienen las siguientes 
 estimaciones de la varianza dentro de cada estrato: $S_{1}^{2} = 100, \ S_{2}^{2} = 81, \ S_{3}^{2} = 36$. 
 ¿Cómo se distribuiría la muestra global haciendo uso de?
-a) Afijación de Neyman
+a) Afijación de Neyman.
 b) Afijación proporcional.
-c) Afijación óptima.
 
-3. Suponga que se tiene una población dividida en cuatro estratos, con afijaciones $\psi_1 = 0.3,\ \psi_2 = 0.2,\ \psi_3 = 0.25$ y
-costos unitarios de muestreo por estrato $C_1 = 10 \text{\$ USD}, \ C_2 = 25 \text{\$ USD}, \ C_3 = 50 \text{\$ USD} \text{ y } C_4 = 5 \text{\$ USD}$.
+3. Suponga que se tiene una población dividida en cuatro estratos, con afijaciones \newline
+$\psi_1 = 0.3,\ \psi_2 = 0.2,\ \psi_3 = 0.25$ y
+costos unitarios de muestreo por estrato \newline
+$C_1 = 10 \text{\$ USD}, \ C_2 = 25 \text{\$ USD}, \ C_3 = 50 \text{\$ USD} \text{ y } C_4 = 5 \text{\$ USD}$.
 Estime el tamaño de muestra sabiendo que el presupuesto total del que se dispone para hacer el muestreo es de 1500\$ USD. 
 
 4. Una inspectora de control de calidad debe estimar la proporción de chips de microcomputadora
