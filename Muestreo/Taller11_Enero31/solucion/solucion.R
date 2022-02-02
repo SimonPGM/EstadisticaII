@@ -110,11 +110,11 @@ lsAest <- N*lspest #limite superior para A (estratificado)
 c(liAest, lsAest) #a nivel global no es = 43
 
 #para el estrato1
-est_p_A(n, N, p_i[1])
+est_p_A(ni[1], Ni[1], p_i[1])
 #(23.47312371, 51.5268763) como 43 esta contenido no se rechaza HO
 
 #Ejercicio 9
-si <- sqrt(p_i * (1-p_i)/(ni-1)) #desviaciones para afijaciones
+si <- sqrt(p_i * (1-p_i)) #desviaciones para afijaciones
 #usando afijacion de Neyman
 psiNeyman <- Ni*si/sum(Ni*si) #afijaciones de Neyman
 D <- (0.1/qnorm(0.05/2, lower.tail = F))^2
