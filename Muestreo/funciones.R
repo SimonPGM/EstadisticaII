@@ -122,7 +122,7 @@ gen_afij <- function(Ni, si = NULL, ci = NULL) {
 
 #Tamano de muestra en MAE
 
-samplesizeMAE <- function(Ni, si2, psi_i) {
+samplesizeMAE <- function(Ni, si2, psi_i, D) {
   #Ni es el tamano de los estratos
   #Si2 es la varianza en los estratos
   #psi_i son las afijaciones
