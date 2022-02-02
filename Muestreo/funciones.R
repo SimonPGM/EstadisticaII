@@ -109,8 +109,14 @@ gen_afij <- function(Ni, si = NULL, ci = NULL) {
   #Ni es el tamano de los estratos
   #si son las desviaciones estandar
   #ci son los costos
-  num <- Ni * ifelse(is.null(si), 1, si) / ifelse(is.null(ci), 1, sqrt(ci))
-  psi_i <- num/sum(num)
+  if (is.null(si)) {
+    si <- rep(1, length(Ni))
+  }
+  if (is.null(ci)) {
+    ci <- rep(1, length(Ni))
+  }
+  num <- Ni * si / sqrt(ci)
+  psi_i <- num / sum(num)
   return(psi_i)
 }
 
