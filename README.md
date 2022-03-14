@@ -60,8 +60,8 @@ La siguiente es la estructura de las carpetas del repositorio.
     </ul>
 </ul>
 
-<b>Nota:</b> dado que ya se culminó la primera sección del curso, la estructura de carpetas se mantiene dentro de la carpeta de la sección correspondiente del curso.
+<b>Nota:</b> cuando se culmine alguna sección del curso, la estructura de carpetas se mantiene dentro de la carpeta de la sección correspondiente.
 <br>
-<b>Posdata:</b> en general esa es la estructura de las carpetas, puede variar según surja o se considere necesario.
+<b>Posdata:</b> en general esa es la estructura de las carpetas, puede variar según surja o se considere necesario. El material de ustedes será subido a la carpeta 2022_1.
 <br>
-<h1>¡Ánimo, ya casi coronamos! :3</h1>
+<h1>¡Bienvenidos al curso! :3</h1>
