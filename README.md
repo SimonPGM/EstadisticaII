@@ -16,14 +16,19 @@ En este repositorio van a encontrar todos los códigos de R para generar los res
     </thead>
     <tbody>
     <tr>
-        <th> <a href="https://meet.google.com/wab-hqzw-iar">Taller</a> </th>
-        <th> Lunes </th>
-        <th> 14 - 16 </th>
+        <td> <a href="https://meet.google.com/gni-zekc-zms" target="_blank">Taller (virtual) </a> </td>
+        <td> Lunes </td>
+        <td> 18 - 20 </td>
     </tr>
     <tr>
-        <th> <a href="https://meet.google.com/kho-jatw-cyu">Asesoría</a> </th>
-        <th> Martes y Miércoles </th>
-        <th> 16 - 18 </th>
+        <td> Asesoría (presencial) </td>
+        <td> Miércoles (43-103) </td>
+        <td> 14 - 16 </td>
+    </tr>
+    <tr>
+        <td> <a href="https://meet.google.com/uxg-osxn-vwq" target="_blank">Asesoría (virtual)</a> </td>
+        <td> Viernes </td>
+        <td> 16 - 18 </td>
     </tr>
     </tbody>
 </table>
