@@ -1,0 +1,153 @@
+---
+header-includes:
+- \usepackage{longtable}
+- \usepackage[utf8]{inputenc}
+- \usepackage[spanish]{babel}\decimalpoint
+output:
+  pdf_document: default
+  html_document: default
+fontsize: 12pt
+papersize: letter
+geometry: margin = 1in
+language: "es"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+```
+
+**Estadística II - Práctica 02$\hspace{1.6cm}$Semestre: 2021-02**
+
+**Profesores: Carlos M. Lopera-Gómez y Raúl Alberto Pérez**
+
+**Monitor: Simon Pedro Galeano**
+
+$\rule{6.5in}{1pt}$
+
+Se presenta una base de datos que recopila información de diferentes 
+clientes de un Ecommerce, a groso modo su tarea consiste en explorar
+dicha base de datos para ajustar un modelo de regresión adecuado donde
+la variable respuesta es la cantidad anual gastada por cliente.
+
+```{r chunck, echo=F}
+datos <-read.csv("Ecommerce_Customers.csv")
+
+datos[1:5, ] %>% 
+  select(Email, Avatar, Yearly.Amount.Spent) %>%
+  kable(col.names = c("Email", "Avatar", "Cantidad gastada al año por cliente"),
+        align = "c", caption = "Vista previa de la base de datos", booktab = T,
+        longtable = T) %>%
+  kable_styling(position = "center", latex_options = "hold_position")
+rm(list = ls())
+```
+
+Su tarea como analista es realizar las siguientes tareas usando el software
+estadístico $R$.
+
+1. Realice la lectura de la base de datos, seleccione únicamente las variables numéricas.
+2. Elabore un gráfico de dispersión de las variables para encontrar aquella que
+se presente una mejor relación lineal con respecto a la variable respuesta.
+3. Escriba la ecuación del modelo de regresión, junto con sus supuestos. Ajuste un modelo de regresión lineal simple y añada la recta de regresión a 
+la gráfica generada anteriormente. \textbf{Nota:} seleccione aleatoriamente el 80%
+de los datos para ajustar el modelo.
+4. Realice la prueba de Wald para la pendiente, luego realice la prueba de significancia
+de la regresión usando análisis de varianza. ¿Ambos enfoques permiten llegar a la misma
+conclusión? ¿Qué relación existe entre una prueba y la otra?
+5. De una interpretación de los parámetros $\beta_0$ y $\beta_1$ del modelo, claro está,
+si es posible hacerlo.
+6. Calcule el $R^2$ usando el coeficiente de correlación y usando sumas de cuadrados,
+compare estos entre sí y compárelos con las salidas de R. Realice una interpretación de este.
+7. Use el modelo para predecir las cantidad anual total gastada por cliente en
+el 20% de los datos que no usó para ajustar el modelo.
+Calcule los respectivos intervalos de confianza y de predicción. ¿Cuáles intervalos son más
+anchos? ¿Por qué cree usted que esto sucede?
+
+\newpage
+
+\begin{center}
+  \textbf{Solución}
+\end{center}
+
+```{r init, echo = F, message=F}
+source("taller2SolucionScript.R")
+theme_set(theme_minimal())
+```
+
+\section{Ejercicio 2}
+
+```{r ej2, echo = F, fig.align='center', message=FALSE}
+p1
+```
+
+Del gráfico anterior se puede notar que la variable que presenta
+una mejor relación líneal (al menos de manera gráfica) con la variable
+respuesta es la duración de la membresía.
+
+Por tanto se escoge a la duración de la membresía como covariable.
+
+\section{Ejercicio 3}
+
+Se realiza la especificación del modelo de regresión, teniendo en cuenta
+que $y$ y $x$ hacen referencia a la variable respuesta y a la covariable
+respectivamente.
+
+$$y_i = \beta_0 + \beta_1x_i + \epsilon_i, \ \epsilon_i \stackrel{iid}{\sim} N(0, \sigma^2), \ 1 \leq i \leq 400$$
+
+Posteriormente se realiza presenta el diagrama de dispersión de los datos
+con la recta de regresión ajustada.
+
+```{r ej3, fig.align='center', echo=F}
+p2
+```
+
+\section{Ejercicio 4}
+
+```{r ej4, echo=F}
+df4 %>%
+  kable(row.names = T, booktab = T, caption = "Resumen de las pruebas",
+        align = "c", longtable = T) %>%
+  kable_styling(latex_options = "hold_position")
+```
+
+\section{Ejercicio 5}
+
+Para el parámetro $\beta_0$ no se posee interpretación, mientras que 
+para el parámetro $\beta_1$ se tiene que el gasto anual por cliente
+aumenta en promedio 63.584 dólares por cada año de suscripción adicional.
+
+\newpage
+
+\section{Ejercicio 6}
+
+```{r ej6, echo=F}
+df6 %>%
+  kable(row.names = T, caption = "Comparación de R²",
+        col.names = "$R^2$",
+        booktab = T, longtable = T, position = "c",
+        escape = F) %>%
+  kable_styling(latex_options = "hold_position")
+```
+
+Se puede observar que independiente de como se calcule, el coeficiente de determinación es el mismo para los métodos de computo de este considerados
+anteriormente.
+
+\section{Ejercicio 7}
+
+```{r ej7, echo = F}
+joint %>%
+  kable(row.names = F, booktab = T, align = "c",
+        longtable = T,
+        caption = "Predicciones, intervalos de confianza y de predicción",
+        col.names = c("Estimación",
+                      "Límite inferior intervalo de confianza",
+                      "Límite superior intervalo de confianza",
+                      "Límite inferior intervalo de predicción",
+                      "Límite superior intervalo de predicción")) %>%
+  kable_styling(latex_options = "hold_position")
+```
+
+Cabe resaltar que los intervalos de predicción son más anchos que 
+los intervalos de confianza para la respuesta media.
