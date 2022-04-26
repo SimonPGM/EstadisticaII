@@ -56,16 +56,27 @@ $X_4$: porcentaje de tiros libres acertados. \newline
 
 Su tarea es la siguiente.
 
-a) Haga una breve descripción de la base de datos, mire que relaciones puede existir entre la respuesta y las 
-covariables o entre las mismas covariables.
-b) Ajuste un modelo usando todas las covariables, especifique este con sus supuestos, además, reporte cual fue la 
+a) Ajuste un modelo usando todas las covariables, especifique este con sus supuestos, además, reporte cual fue la 
 estimación del modelo.
-c) Haga un análisis de los coeficientes de manera marginal, ¿cuales de estos son significativos? Presente los 
-resultados en una tabla.
-d) Haga la prueba de la significancia de la regresión, base sus conclusiones en la tabla ANOVA.
-e) Realice la prueba lineal generalizada $(H_0: \mathbf{L}\beta = 0 \text{ vs } H_1 : \mathbf{L}\beta \neq 0)$ para
-concluir si los parámetros que no son significativos de manera marginal, siguen sin serlo de manera conjunta.
-Especifique el modelo completo y el modelo reducido.
-f) Finalmente, ajuste un nuevo modelo con las variables del modelo reducido e incluya el gráfico. \newline
+b) Haga un análisis de los coeficientes de manera marginal, es decir, analice estos de manera individual, ¿cuales de estos son significativos?
+c) Haga la prueba de la significancia de la regresión, base sus conclusiones en la tabla ANOVA, enuncie dicha prueba de otras maneras.
+d) Realice las siguientes pruebas: 
+
+$$
+\begin{cases}
+\text{H}_0: \beta_1 = \beta_2 = \beta_4\\
+\text{H}_1: \text{A determinar}
+\end{cases}
+$$
+$$
+\begin{cases}
+\text{H}_0: \beta_1 + \beta_2 = \beta_4; \ \beta_3 = -\beta_4\\
+\text{H}_1: \text{A determinar}
+\end{cases}
+$$
+
+Especifique el modelo completo y el modelo reducido, escriba las hipótesis anteriores
+de manera matricial.
+
 \textbf{Nota}: en el caso de las pruebas, plantear las hipótesis y enunciar el estadístico de prueba de manera
 clara.
