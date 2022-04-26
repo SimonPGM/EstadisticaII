@@ -69,4 +69,20 @@ La siguiente es la estructura de las carpetas del repositorio.
 <br>
 <b>Posdata:</b> en general esa es la estructura de las carpetas, puede variar según surja o se considere necesario. El material de ustedes será subido a la carpeta 2022_1.
 <br>
-<h1>¡Bienvenidos al curso! :3</h1>
+<h1>Respecto a la encuesta</h1>
+
+Bueeeeeeeeeeeeenas tardes, espero que estén súper bien. Les escribo con intención de comentarles que llegó la hora de dañar la amistad con sus compas, digo, de que trabajen en grupo en el curso (:p es chiste). Los grupos son de máximo cuatro integrantes, los cuales deben ser registrados en la siguiente encuesta.
+
+Link de la encuesta: https://forms.gle/UrE2xLVqhDXGGE8z8
+
+Acá les dejo un ejemplo de llenado de la encuesta.
+
+![](./others/temp.png).
+
+Note que para cada integrante debe estar de la siguiente manera: nombre completo (correo institucional), además, entre el nombre completo y el correo hay un único espacio. Los integrantes deben estar en líneas diferentes así como se muestra en la imagen.
+
+Respecto al horario del curso, seleccione la hora a la que usted y sus compañeros de grupo de trabajo ven la clase, esto quiere decir que todos los integrantes del grupo de trabajo deben pertenecer al mismo grupo del curso.
+
+Que tengan bonita tarde :3
+
+**Posdata** no sé si se pueden hacer solos, pregúntenle primero al profe. 
