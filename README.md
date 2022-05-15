@@ -71,3 +71,5 @@ La siguiente es la estructura de las carpetas del repositorio.
 <br>
 <b>Aviso:</b> en este momento los trabajos están siendo revisados, procuraré tenerlos
 listos para el miércoles.
+<br>
+<b>Recomendación:</b> a mi criterio este es el parcial menos fácil, pónganse las pilas.
