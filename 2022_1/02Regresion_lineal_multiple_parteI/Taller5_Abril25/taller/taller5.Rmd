@@ -1,0 +1,82 @@
+---
+header-includes:
+- \usepackage{longtable}
+- \usepackage[utf8]{inputenc}
+- \usepackage[spanish]{babel}\decimalpoint
+output:
+  pdf_document: default
+fontsize: 12pt
+papersize: letter
+geometry: margin = 1in
+language: "es"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, comment = NA)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+```
+
+**Estadística II - Taller 05$\hspace{1.6cm}$Semestre: 2022-01**
+
+**Profesor: Raúl Alberto Pérez**
+
+**Monitor: Simon Pedro Galeano**
+
+$\rule{6.5in}{1pt}$
+
+El día de hoy llegó la hora de combinar teoría y práctica.
+
+1. Considere las siguientes afirmaciones y determine su valor de verdad.
+a) La matriz sombrero cumple que $H = (H^{2021})^{T}$.
+b) Suponga que se ajustó el modelo $y_i = \beta_0 + \beta_1x_{1i} + \beta_2x_{2i} + \beta_3 x_{3i}$ y se tiene que $gl(SSE) = 98$. El modelo fue ajustado con 102 observaciones.
+c) Una suma de cuadrados extra, mide la reducción marginal en la SSE.
+d) En la hipótesis lineal general $(H_0: \mathbf{L}\beta = 0 \text{ vs } H_1 : \mathbf{L}\beta \neq 0)$ los grados
+de libertad del cuadrado medio debido a la hipótesis son iguales al rango de la matriz $\mathbf{L}$
+
+2. Se tiene una base de datos con información de algunos jugadores de la NBA, se presentan algunos datos a continuación
+en la siguiente tabla
+
+```{r datatable}
+datos <- read.table("datos.txt", header = T, sep = " ")
+head(datos) %>%
+  kable(caption = "Algunos datos de jugadores de la NBA", 
+        align = rep("c", 5), longtable = T, booktab = T) %>%
+  kable_styling(latex_options = "HOLD_position")
+```
+
+Adicionalmente se hace descripción de cada una de las variables:
+
+$Y$: promedio de puntos anotados por juego. \newline
+$X_1$: altura en pies. \newline
+$X_2$: masa en libras. \newline
+$X_3$: porcentaje de tiros de campo acertados. \newline
+$X_4$: porcentaje de tiros libres acertados. \newline
+
+Su tarea es la siguiente.
+
+a) Ajuste un modelo usando todas las covariables, especifique este con sus supuestos, además, reporte cual fue la 
+estimación del modelo.
+b) Haga un análisis de los coeficientes de manera marginal, es decir, analice estos de manera individual, ¿cuales de estos son significativos?
+c) Haga la prueba de la significancia de la regresión, base sus conclusiones en la tabla ANOVA, enuncie dicha prueba de otras maneras.
+d) Realice las siguientes pruebas: 
+
+$$
+\begin{cases}
+\text{H}_0: \beta_1 = \beta_2 = \beta_4\\
+\text{H}_1: \text{A determinar}
+\end{cases}
+$$
+$$
+\begin{cases}
+\text{H}_0: \beta_1 + \beta_2 = \beta_4; \ \beta_3 = -\beta_4\\
+\text{H}_1: \text{A determinar}
+\end{cases}
+$$
+
+Especifique el modelo completo y el modelo reducido, escriba las hipótesis anteriores
+de manera matricial.
+
+\textbf{Nota}: en el caso de las pruebas, plantear las hipótesis y enunciar el estadístico de prueba de manera
+clara.

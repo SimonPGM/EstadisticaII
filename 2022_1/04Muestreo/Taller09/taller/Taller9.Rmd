@@ -30,7 +30,7 @@ $\rule{6.5in}{1pt}$
 1. Determine el valor de verdad de las siguientes afirmaciones
 a) Un censo consiste en seleccionar un subconjunto de la población, medir la característica
 de interés e inferir con esta información acerca de toda la población.
-b) La probabilidad de que una unidad en particular esté presente en la muestra es $\frac{n}{N}$.
+b) La probabilidad de que una unidad cualesquiera esté presente en la muestra es $\frac{n}{N}$.
 c) Para $N$ muy grande se tiene que $\mathbb{E}\left(S^2\right) \approx \sigma^2$.
 d) Suponga que se tiene un grupo de 11 personas númeradas del 1 al 11, de este grupo se desea
 extraer una muestra de tamaño 6. Para esto se decide tirar un par de dados 6 veces y en cada
