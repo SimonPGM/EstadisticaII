@@ -33,7 +33,7 @@ el uso de muestreo aleatorio estratificado
 ```{r}
 df1 <- data.frame(E1 = c("$N_1=500$", "$n_1=50$", "$\\overline{\\rm y}_1=40$", "$S_{1}^{2}=400$"),
 E2 = c("$N_1=1000$", "$n_2=80$", "$\\overline{\\rm y}_2=60$", "$S_{2}^{2}=300$"),
-E3 = c("$N_1=4000$", "$n_3=160$", "$\\overline{\\rm y}_2=100$", "$S_{3}^{2}=100$"))
+E3 = c("$N_1=4000$", "$n_3=160$", "$\\overline{\\rm y}_3=100$", "$S_{3}^{2}=100$"))
 kable(df1, escape = F, booktab = T, align = "c") %>%
     kable_styling(latex_options = c("HOLD_position"))
 ```
