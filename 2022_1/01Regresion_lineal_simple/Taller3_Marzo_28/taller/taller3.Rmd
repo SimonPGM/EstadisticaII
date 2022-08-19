@@ -19,9 +19,9 @@ library(kableExtra)
 library(tidyverse)
 ```
 
-**Estadística II - Taller 03$\hspace{1.6cm}$Semestre: 2022-01**
+**Estadística II - Taller 03$\hspace{1.6cm}$Semestre: 2021-02**
 
-**Profesores: Raúl Alberto Pérez**
+**Profesores: Carlos M. Lopera-Gómez y Raúl Alberto Pérez**
 
 **Monitor: Simon Pedro Galeano**
 
@@ -47,7 +47,7 @@ gen_dat <- function(n, seed = 7) {
 
 datos <- gen_dat(75)
 
-datos[1:5, ] %>% 
+head(datos) %>% 
   kable(booktab = T, caption = "Presentación de los datos",
         longtable = T, align = "c") %>%
   kable_styling(latex_options = "HOLD_position")
@@ -92,8 +92,3 @@ del modelo $$y_i = \beta_0 + \beta_1 x4_i + \varepsilon_i, \ \varepsilon_i \over
 para ello use la función `rsm` del paquete `rsm`.
 
 \textbf{Nota:} se propone como ejercicio realizar la validación del modelo.
-
-9. Con la base de datos del archivo decaimiento.xlsx, haga un análisis
-de si se puede ajustar un modelo, bien sea lineal o intrínsecamente lineal,
-escriba el modelo y cúales son sus supuestos, reporte los coeficientes
-estimados e interprételos.
